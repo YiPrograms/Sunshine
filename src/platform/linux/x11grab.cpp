@@ -417,8 +417,7 @@ struct x11_attr_t : public display_t {
       }
 
       if(!result) {
-        BOOST_LOG(error) << "Could not stream display number ["sv << streamedMonitor << "], there are only ["sv << monitor << "] displays."sv;
-        return -1;
+        BOOST_LOG(info) << "Could not stream display number ["sv << streamedMonitor << "], there are only ["sv << monitor << "] displays."sv;
       }
 
       if(result->crtc) {
